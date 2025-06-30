@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mental Health Support Initiative (MHSI) - Promoting mental well-being through awareness, advocacy, and community support.">
+  <meta name="keywords" content="MHSI, mental health, student support, awareness, Olabisi Onabanjo University">
+  <meta name="author" content="Mental Health Support Initiative (MHSI)">
+  <title>Home | MHSI</title>
+  <script src="https://unpkg.com/alpinejs@3.13.0/dist/cdn.min.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header with responsive navigation -->
+<header class="bg-white shadow-md" x-data="{ open: false }">
+  <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-green-700">MHSI</h1>
+    
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="text-green-700 font-semibold">Home</a>
+      <a href="aboutmhsi.html" class="text-gray-700 hover:text-green-600">About</a>
+      <a href="events.html" class="text-gray-700 hover:text-green-600">Events</a>
+      <a href="resources.html" class="text-gray-700 hover:text-green-600">Resources</a>
+      <a href="join.html" class="text-gray-700 hover:text-green-600">Join Us</a>
+      <a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a>
+    </nav>
+
+    <!-- Hamburger Menu Button -->
+    <button @click="open = !open" class="md:hidden text-gray-700 focus:outline-none">
+      <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav x-show="open" class="md:hidden px-4 pb-4 space-y-2">
+    <a href="index.html" class="block text-green-700 font-semibold">Home</a>
+    <a href="aboutmhsi.html" class="block text-gray-700 hover:text-green-600">About</a>
+    <a href="events-new.html" class="block text-gray-700 hover:text-green-600">Events</a>
+    <a href="resources.html" class="block text-gray-700 hover:text-green-600">Resources</a>
+    <a href="join.html" class="block text-gray-700 hover:text-green-600">Join Us</a>
+    <a href="contact.html" class="block text-gray-700 hover:text-green-600">Contact</a>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="bg-green-100 py-20 px-6 text-center">
+    <img src="/mhbanner.webp" 
+     alt="Mental Health Support" 
+     class="w-full max-h-[500px] object-contain mb-6 rounded-md shadow-md mx-auto">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">Welcome to the Mental Health Support Initiative (MHSI)</h2>
+      <p class="text-lg text-gray-700 mb-6">Empowering minds, breaking stigma, and building a healthier academic community — one conversation at a time.</p>
+      <a href="join.html" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800 font-semibold">Join the Movement</a>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-green-800 mb-4">Who We Are</h3>
+      <p class="text-gray-700 mb-6">MHSI is a student-led mental health initiative committed to promoting psychological well-being, reducing stigma, and connecting individuals to support systems through events, education, and community engagement.</p>
+      <a href="aboutmhsi.html" class="text-green-700 font-semibold hover:underline">Learn more about us →</a>
+    </div>
+  </section>
+
+  <!-- Quick Links with Icons -->
+<section class="bg-white py-16 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+    
+    <!-- Events -->
+    <div class="p-6 bg-green-50 rounded shadow">
+      <i class="fas fa-calendar-alt text-3xl text-green-700 mb-4"></i>
+      <h4 class="text-xl font-bold text-green-700 mb-2">Events</h4>
+      <p class="text-gray-600 mb-4">From powerful walks to creative workshops — see what’s coming up next.</p>
+      <a href="events-new.html" class="text-green-700 font-semibold hover:underline">Explore Events</a>
+    </div>
+    
+    <!-- Join Us -->
+    <div class="p-6 bg-green-50 rounded shadow">
+      <i class="fas fa-user-plus text-3xl text-green-700 mb-4"></i>
+      <h4 class="text-xl font-bold text-green-700 mb-2">Join Us</h4>
+      <p class="text-gray-600 mb-4">Become a part of our growing mental health community — on and off campus.</p>
+      <a href="join.html" class="text-green-700 font-semibold hover:underline">Become a Member</a>
+    </div>
+    
+    <!-- Resources -->
+    <div class="p-6 bg-green-50 rounded shadow">
+      <i class="fas fa-hands-helping text-3xl text-green-700 mb-4"></i>
+      <h4 class="text-xl font-bold text-green-700 mb-2">Resources</h4>
+      <p class="text-gray-600 mb-4">Need help or information? Access guides, articles, and helplines curated for you.</p>
+      <a href="resources.html" class="text-green-700 font-semibold hover:underline">View Resources</a>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Testimonial/Quote -->
+  <section class="py-20 px-6 bg-green-100">
+    <div class="max-w-3xl mx-auto text-center italic text-gray-700">
+      <p class="text-xl">"When we talk about mental health, we create room for healing, connection, and hope. MHSI gave me the courage to speak and be heard."</p>
+      <p class="mt-4 font-semibold text-green-800">– Ayo, OOU Law Student</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 px-6 text-center bg-white">
+    <h3 class="text-2xl font-bold text-green-800 mb-4">Ready to make an impact?</h3>
+    <p class="text-gray-700 mb-6">Volunteer, contribute your voice, or partner with us. Together, we can redefine the narrative around mental health.</p>
+    <a href="contact.html" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800 font-semibold">Get in Touch</a>
+  </section>
+
+  <!-- Polished Footer -->
+<footer class="bg-green-800 text-white px-6 py-10">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    <!-- About -->
+    <div>
+      <h4 class="text-lg font-semibold mb-2">About MHSI</h4>
+      <p class="text-sm text-gray-200">The Mental Health Support Initiative (MHSI) is a student-led organization at OOU focused on promoting mental wellness, awareness, and support.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+      <ul class="text-sm space-y-2">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="aboutmhsi.html" class="hover:underline">About</a></li>
+        <li><a href="events.html" class="hover:underline">Events</a></li>
+        <li><a href="resources.html" class="hover:underline">Resources</a></li>
+        <li><a href="join.html" class="hover:underline">Join Us</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Connect With Us</h4>
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a href="https://www.instagram.com/mhsi_oou?igsh=MTh0dnp6ZnAwcTYwbg==" aria-label="Instagram" class="text-white hover:text-green-300 text-xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/mhsioou?s=21" aria-label="X (Twitter)" class="text-white hover:text-green-300 text-xl">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 text-center text-sm text-gray-300">
+    © 2025 Mental Health Support Initiative (MHSI) – All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
